@@ -1,2 +1,3 @@
 pip install pypdf
 pip install chromadb
+pip install torch transformers python-pptx Pillow

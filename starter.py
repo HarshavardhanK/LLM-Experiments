@@ -5,6 +5,7 @@ from llama_index import ServiceContext, set_global_service_context
 
 from langchain.llms import Ollama
 
+
 llm = Ollama(model="llama2")
 
 embed_model = OllamaEmbeddings(base_url="http://localhost:11434", model="llama2")
@@ -21,7 +22,7 @@ index = VectorStoreIndex.from_documents(documents)
 
 query_engine = index.as_query_engine(service_context=service_context)
 #response = query_engine.query("What did the shopkeeper ask Harsha in Manali? Can you answer the shopkeeper's question?")
-response = query_engine.query("In Kirchenbauer's paper, what do the paramters of gamma and delta do?")
+response = query_engine.query("What is The rational agent approach?")
 print(response)
 
 import logging
